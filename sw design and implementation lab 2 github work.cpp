@@ -23,14 +23,12 @@ struct tourType
 	int distance;
 	timeType travelTime;
 };
- inputValue(string city, int distance, int hour, double minute );
+ tourType inputValue(string name, int distance, int hour, double min);
 int main()
 {
 	tourType destination;
-	destination.cityName = "Nottingham";
-	destination.distance = 130;
-	destination.travelTime.hr = 3;
-	destination.travelTime.min = 15;
+	destination = inputValue(destination.cityName, destination.distance, destination.travelTime.hr, destination.travelTime.min);
+	
 
 	displayValue(destination.cityName, destination.distance, destination.travelTime.hr, destination.travelTime.min);
 
@@ -41,9 +39,13 @@ void displayValue(string name, int distance, int timeHour, double timeMin) {
 	cout << "Destination: " << name << "\nDistance to destination: " << distance << " miles\nHow long till arrival at destination: " << timeHour << " hours and " << timeMin << " minutes" << endl;
 }
 
-string inputValue(tourType storageVariable) {
+tourType inputValue(string name, int distance, int hour, double min) {
+	tourType newDestination;
+	newDestination.cityName = "Nottingham";
+	newDestination.distance = 130;
+	newDestination.travelTime.hr = 3;
+	newDestination.travelTime.min = 15;
 	
 	
-	
-	return 0;
+	return newDestination;
 }
