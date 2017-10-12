@@ -24,14 +24,15 @@ struct tourType
 	timeType travelTime;
 };
  tourType inputValue(string name, int distance, int hour, double min);
+ void insertValue(tourType variable);
 int main()
 {
 	tourType destination;
 	destination = inputValue(destination.cityName, destination.distance, destination.travelTime.hr, destination.travelTime.min);
 	
-
 	displayValue(destination.cityName, destination.distance, destination.travelTime.hr, destination.travelTime.min);
 
+	insertValue(destination);
     return 0;
 }
 
@@ -48,4 +49,12 @@ tourType inputValue(string name, int distance, int hour, double min) {
 	
 	
 	return newDestination;
+}
+
+void insertValue(tourType variable) {
+	tourType destination2;
+
+	destination2 = variable;
+
+	displayValue(destination2.cityName, destination2.distance, destination2.travelTime.hr, destination2.travelTime.min);
 }
