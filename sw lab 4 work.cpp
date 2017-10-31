@@ -62,14 +62,19 @@ int main()
 	temp = temp->next;
 	delete list;
 
-	//temp = postCurrent->next;
-	//temp = temp->next;
-	//temp->next = current->next;
-	//current->next = temp;
-	//list = temp;
+	
 	temp = first->next;
+	temp->next = current;
 	temp = temp->next;
-	std::cout << temp->info;
+	list = temp;
+	list = postCurrent->next;
+	list->next = postCurrent;
+	current->next = list;
+	temp = current->next;
+	temp = temp->next;
+	
+	
+	std::cout << current->info<<temp->info;
 	
     return 0;
 }
